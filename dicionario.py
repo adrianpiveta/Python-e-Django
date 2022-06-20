@@ -23,6 +23,11 @@ def dicionario():
     print("PR" in estados)
     del estados["PR"]
     print("PR" in estados) #retorna True ou False se está contido ou nao
+    relacao = dict(a=1, b=2, c=4)
+    print(relacao)
+    lista = {item[0].upper(): item[1] for item in relacao.items()}
+    print(lista)
+    
     
 
 dicionario()
