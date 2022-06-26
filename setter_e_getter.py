@@ -33,7 +33,6 @@ class Computador():
 
 if __name__ == '__main__':
     acer = Computador(1, 'aspire', '24/06/2022', 600, 'asus')
-
     #acer.codigo = 0
     acer.vida = 0
 
