@@ -1,0 +1,3 @@
+['__init__.py', 'modelo04.py', 'modelo05.py', 'modelo06.py', 'modelo07.py', 'test.py']
+['_texto.txt', 'arquivo.txt', 'autores.txt', 'testee.txt', 'texto.txt']
+['__init__.py', 'modelo04.py', 'modelo05.py', 'modelo06.py', 'modelo07.py', 'test.py']
