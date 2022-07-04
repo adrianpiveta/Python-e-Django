@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 class Cliente(models.Model):
@@ -5,7 +7,7 @@ class Cliente(models.Model):
     endereco = models.CharField(max_length=200)
     telefone = models.CharField(max_length=20)
     email = models.CharField(max_length=200)
-    registrado_em = models.DateTimeField('data do registro')
+    registrado_em = models.DateTimeField('data do registro', default=datetime.date)
 
 class Reserva(models.Model):
     data_reserva = models.DateTimeField('data da reserva')
