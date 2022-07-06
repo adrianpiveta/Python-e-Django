@@ -16,4 +16,11 @@ class ClienteAdmin(admin.ModelAdmin):
             'classes': ['collapse']}), #pode ser expandida, por padrão abre minimizada
     ]
 
+class ReservaAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('datas', {'fields': ['data_reserva', 'data_evento']}),
+        ('Pessoas', {'fields': ['pessoas', 'cliente']}),
+    ]
+
 admin.site.register(Cliente, ClienteAdmin) # registra cliente como gerenciavel pelo painel AD
+#admin.site.register(Reserva, ReservaAdmin)
