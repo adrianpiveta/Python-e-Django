@@ -16,6 +16,9 @@ class Cliente(models.Model):
     def registro_eh_antigo(self):
         um_ano = timezone.now() - datetime.timedelta(days=365)
         return self.registrado_em < um_ano # retorna true or false se for antigo ou não
+    registro_eh_antigo.admin_order_field = 'registrado_em' #ordena em outra forma
+    registro_eh_antigo.boolean = True #muda exibição para icone indicador ao inves de texto
+    registro_eh_antigo.short_description = 'Cliente Antigo?' #muda nome da descrição lista
 
 class Reserva(models.Model):
     data_reserva = models.DateTimeField('data da reserva')
