@@ -1,0 +1,9 @@
+{% if ultimos_clientes %}
+    <ul>
+        {% for cliente in ultimos_clientes %}
+            <li><a href="/reservas/{{ cliente.id }}/">{{ cliente.nome }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum cliente registrado</p>
+{% endif %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if ultimos_clientes %}
+    <ul>
+        {% for cliente in ultimos_clientes %}
+            <li><a href="/reservas/{{ cliente.id }}/">{{ cliente.nome }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum cliente registrado</p>
+{% endif %}
+</body>
+</html>
