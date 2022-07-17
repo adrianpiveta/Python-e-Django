@@ -34,6 +34,7 @@ def main():
     registros = executar_comando(cursor, comando_sql)
     for registro in registros:
         print(registro)
+				print(registro.toString())
 
 
 
