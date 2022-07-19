@@ -1,7 +1,7 @@
 from django.http import HttpResponse, Http404
 from django.template import RequestContext, loader
 from django.template.loader import render_to_string
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Cliente
 
@@ -16,11 +16,8 @@ def index(request):
     return  render(request, 'reservas/index.html', context)
 
 def detalhe(request, cliente_id):
-    try:
-        cliente = Cliente.objects.get(pk=cliente_id)
-    except:
-        raise Http404("Cliente inexistente")
-    return render(request, 'reservas/detalhe.html', {'cliente':cliente})
+    cliente = get_object_or_404(Cliente, pk=cliente_id)
+    return render(request, 'reservas/detalhe.html', {'cliente': cliente})
 
 def reservas(request, cliente_id):
     resposta = 'Foi feito uma solicitação para os reservas '\

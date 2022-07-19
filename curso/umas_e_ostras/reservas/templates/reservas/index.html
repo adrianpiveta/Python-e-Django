@@ -1,7 +1,7 @@
 {% if ultimos_clientes %}
     <ul>
         {% for cliente in ultimos_clientes %}
-            <li><a href="/reservas/{{ cliente.id }}/">{{ cliente.nome }}</a></li>
+            <li><a href="{% url 'reservas:detalhe' cliente.id%}">{{ cliente.nome }}</a></li>
         {% endfor %}
     </ul>
 {% else %}
